@@ -1,0 +1,265 @@
+#caja_contacto{
+
+    margin: 30px auto;
+    width: 100%;
+    height: max-content;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#caja_contacto > div{
+
+    width: 45%;
+    margin: 15px;
+    height: 550px;
+
+}
+
+.imagen{
+
+    transition-property: transform;
+    transition-duration: 0.5s;
+
+}
+
+.imagen:hover{
+
+    transform: scale(1.1);
+
+}
+
+.formulario_contacto{
+
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+
+}
+
+.formulario_contacto label{
+
+    color: #fff;
+    font-size: 20px;
+
+}
+
+.formulario_contacto input{
+
+    height: 40px;
+    width: 210px;
+    margin: 20px 0;
+    font-size: 15px;
+    text-align: center;
+    background: transparent;
+    border: 0;
+    border-bottom: 3px solid #0f0;
+    color: #fff;
+
+}
+
+.formulario_contacto input:active{
+
+    outline: transparent;
+
+}
+
+
+textarea{
+
+    margin: 20px 0;
+    overflow: auto;
+    background: transparent;
+    border: 0;
+    border-bottom: 3px solid #0f0;
+    color: #fff;
+
+}
+
+#Enviar{
+
+    background: #0f0;
+    color: #000;
+    font-size: 20px;
+
+}
+
+.Mensaje_envio{
+
+    width: 500px;
+    height: 250px;
+    position: fixed;
+    top: 30%;
+    left: 35%;
+    background-color: #000;
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    outline: 5px solid #0f0;
+    text-align: center;
+
+}
+
+.Mensaje_envio p{
+
+    margin: 20px 0;
+
+}
+
+.Mensaje_envio a{
+
+    margin: 30px 0;
+
+}
+
+.Mensaje_envio button{
+
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    color: #000;
+    background: #0f0;
+
+}
+
+/* --------------------------------------------------------------------- Responsive ------------------------------------------ */
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 900px){
+
+    #caja_contacto > div{
+
+        width: 45%;
+        margin: 15px;
+        height: 520px;
+    
+    }
+
+    .formulario_contacto{
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    
+    }
+    
+    .formulario_contacto label{
+    
+        color: #fff;
+        font-size: 1.1em;
+        margin: 10px 0;
+    
+    }
+    
+    .formulario_contacto input{
+    
+        height: 30px;
+        width: 150px;
+        margin: 10px 0;
+        font-size: 0.9em;
+    
+    }
+    
+    #Enviar{
+
+        background: #0f0;
+        color: #000;
+        font-size: 0.7em;
+    
+    }
+
+    .Mensaje_envio{
+
+        width: 450px;
+        height: 200px;
+        position: fixed;
+        top: 30%;
+        left: 20%;
+    
+    }
+    
+    .Mensaje_envio p{
+    
+        margin: 10px 0;
+        font-size: 0.8em;
+    
+    }
+    
+    .Mensaje_envio a{
+    
+        margin: 20px 0;
+        font-size: 0.8em;
+    
+    }
+    
+    .Mensaje_envio button{
+    
+        width: 200px;
+        height: 40px;
+        font-size: 0.9em;
+    
+    }
+    
+}
+
+@media (min-width: 1700px){
+
+    #caja_contacto > div{
+
+        width: 45%;
+        margin: 25px;
+        height: 1020px;
+    
+    }
+
+    .formulario_contacto{
+
+        width: 650px;
+    
+    }
+
+    .formulario_contacto label{
+
+        color: #fff;
+        font-size: 30px;
+        margin: 25px 0;
+    
+    }
+
+    .formulario_contacto input{
+
+        height: 60px;
+        width: 350px;
+        font-size: 30px;
+        margin: 25px 0;
+
+    }
+
+    textarea{
+
+        font-size: 25px;
+    
+    }
+
+    .Mensaje_envio{
+
+        width: 700px;
+        height: 350px;
+        font-size: 40px;
+        
+    }
+
+    .Mensaje_envio button{
+
+        width: 300px;
+        height: 80px;
+        font-size: 30px;
+    
+    }
+
+}

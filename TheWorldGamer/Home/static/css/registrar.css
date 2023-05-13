@@ -1,0 +1,148 @@
+#Caja-registrar{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+    margin: 50px 0px;
+
+}
+
+#Caja-registrar > div{
+
+    width: 45%;
+    margin: 20px 15px;
+    height: 850px;
+
+}
+
+.imagen_registrar{
+
+    transition-property: transform;
+    transition-duration: 0.5s;
+
+}
+
+.imagen_registrar:hover{
+
+    transform: scale(1.1);
+
+}
+
+.formulario-registrar{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.formulario-registrar label{
+
+    font-size: 30px;
+    margin: 15px 0;
+    color: #fff;
+
+}
+
+.formulario-registrar > input{
+
+    margin: 20px 0;
+    width: 350px;
+    height: 60px;
+    background: transparent;
+    border: 0;
+    border-bottom: 3px solid #fa0;
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+
+}
+
+#Registrarse{
+
+    border: 3px solid #000;
+    background-color: #fa0;
+    color: #fff;
+    font-size: 25px;
+    height: 60px;
+    border-radius: 15px;
+
+}
+
+span{
+
+    color: #fff;
+
+}
+
+.errorList{
+
+    color: #d00;
+
+}
+
+.iniciar_sesion{
+
+    text-decoration: none;
+    margin: 10px 0;
+    margin-left: 70px;
+    font-size: 25px;
+    color: #ff0;
+
+}
+
+/* --------------------------------------------------- Responsive ------------------------------------------------------ */
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 900px){
+
+    #Caja-registrar{
+
+        margin: 20px 0px;
+    
+    }
+    
+    #Caja-registrar > div{
+    
+        width: 45%;
+        margin: 10px 5px;
+        height: 650px;
+    
+    }
+
+    .formulario-registrar label{
+
+        font-size: 1.1em;
+        margin: 10px 0;
+    
+    }
+    
+    .formulario-registrar > input{
+    
+        margin: 10px 0;
+        width: 250px;
+        height: 40px;
+        font-size: 0.8em;
+    
+    }
+    
+    #Registrarse{
+    
+        font-size: 0.8em;
+        height: 40px;
+    
+    }
+    
+    
+    .iniciar_sesion{
+    
+        margin: 10px 0;
+        margin-left: 30px;
+        font-size: 0.8em;
+
+    }
+
+}

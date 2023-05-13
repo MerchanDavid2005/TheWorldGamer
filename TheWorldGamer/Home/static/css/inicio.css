@@ -1,0 +1,493 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+body{
+
+    background: #000;
+    
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+nav, footer{
+    width: 100%;
+    height: max-content;
+}
+
+footer{
+
+    margin-top: 100px;
+
+}
+
+.Inicio-Lista_enlaces{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2.3em;
+    list-style: none;
+    height: 170px;
+}
+
+.Inicio-enlaces{
+    text-decoration: none;
+    color: #F00;
+    transition-property: color transform;
+    transition-duration: 0.5s;
+}
+
+.Inicio-enlaces:hover{
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.Login{
+
+    width: 120px;
+    height: 90px;
+    font-size: 0.5em;
+    text-align: center;
+
+}
+
+.Login div{
+
+    width: 100%;
+    text-align: center;
+
+}
+
+.Login p{
+
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+
+}
+
+footer > ul > li{
+    color: #F00;
+    font-size: 0.5em;
+}
+
+footer a{
+
+    text-decoration: none;
+
+}
+
+footer h2{
+    color: #f00;
+    font-size: 2.5em;
+    text-align: center;
+    transition-property: color transform;
+    transition-duration: 0.5s;
+    
+}
+
+footer h2:hover{
+    color: #fff;
+    font-size: 2.8em;
+}
+
+.correo, .numero, .logout{
+    color: #F00;
+    font-size: 1.2em;
+    transition-property: color font-size;
+    transition-duration: 0.5s;
+}
+
+.correo:hover{
+    color: #fff;
+    font-size: 1.4em;
+}
+
+.numero:hover{
+    color: #fff;
+    font-size: 1.4em;
+}
+
+.logout:hover{
+
+    color: #fff;
+    font-size: 1.4em;
+
+}
+
+/* ------------------------------------------------ Contenido de la pagina -------------------------------*/
+
+/* --------------------------------------------------- Div 1 -------------------------------------------------- */
+
+#Inicio-presentacion{
+    display: flex;
+    width: 95%;
+    height: max-content;
+    margin: 60px 15px;
+    padding: 20px;
+}
+
+
+.Inicio-presentacion-Texto_Informativo{
+    width: 50%;
+    height: max-content;
+    color: #fff;
+    font-size: 1.9em;
+    margin: 0 20px;
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.Inicio-presentacion-Texto_Informativo:hover{
+    transform: scale(1.05);
+}
+
+.Inicio-presentacion-Texto_informativo-titulo{
+    color: #F00;
+    line-height: 100px;
+    text-align: center;
+    margin-bottom: 20px
+}
+
+.Inicio-presentacion-imagen_informativa{
+    width: 50%;
+    background: url(../img/inicio/instrucciones.png);
+    box-shadow: 30px 30px 10px 10px #888;
+    background-size: 100% 100%;
+    animation: imagenflotante 1.5s alternate infinite forwards;
+
+}
+
+.Inicio-presentacion-imagen-Instrucciones{
+    width: 100%;
+    height: 100%;
+    background: url(../img/inicio/imagen1.jpg);
+    background-size: 100% 100%;
+    transition-property: filter;
+    transition-duration: 3s;
+}
+
+.Inicio-presentacion-imagen-Instrucciones:hover{
+
+    filter: opacity(0);
+
+}
+
+/* ------------------------------------------------------------- Animaciones div1 ---------------------------------------------*/
+
+@keyframes imagenflotante {
+    0%{
+        transform: translateY(0px);
+    }
+
+    100%{
+        transform: translateY(-20px);
+    }
+}
+
+
+
+/* --------------------------------------------------- Responsive ------------------------------------------------------ */
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 550px){
+    
+    .Inicio-Lista_enlaces{
+
+        height: 200px;
+        font-size: 0.9em;
+        
+    }
+
+    .Login{
+
+        display: flex;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        font-size: 10px;
+    
+    }
+    
+    .Login div{
+    
+        width: 100%;
+    
+    }
+    
+    .Login p{
+    
+        margin: 10px 0;
+        width: 100%;
+    
+    }
+
+    #Inicio-presentacion{
+
+        flex-direction: column;
+        height: max-content;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .Inicio-presentacion-Texto_Informativo{
+
+        width: 90%;
+        margin: 50px 0;
+        font-size: 25px;
+        text-align: center;
+
+    }
+
+    .Inicio-presentacion-imagen_informativa{
+
+        width: 90%;
+        margin: 40px 0;
+        height: 400px
+
+    }
+
+    footer h2{
+
+        font-size: 20px;
+        margin: 10px 0;
+        
+    }
+
+    footer > ul{
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    footer > ul > li{
+
+        font-size: 15px;
+
+    }
+
+}
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 551px) and (max-width: 750px){
+
+    .Inicio-Lista_enlaces{
+
+        height: 200px;
+        font-size: 1.25em;
+        
+    }
+
+    .Login{
+
+        display: flex;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        font-size: 10px;
+    
+    }
+    
+    .Login div{
+    
+        width: 100%;
+    
+    }
+    
+    .Login p{
+    
+        margin: 10px 0;
+        width: 100%;
+    
+    }
+
+    #Inicio-presentacion{
+
+        flex-direction: column;
+        height: max-content;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .Inicio-presentacion-Texto_Informativo{
+
+        width: 90%;
+        margin: 50px 0;
+        font-size: 1.5em;
+        text-align: center;
+
+    }
+
+    .Inicio-presentacion-imagen_informativa{
+
+        width: 90%;
+        margin: 40px 0;
+        height: 400px
+
+    }
+
+    footer h2{
+
+        font-size: 30px;
+        margin: 10px 0;
+        
+    }
+
+    footer > ul{
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    footer > ul > li{
+
+        font-size: 1.1rem;
+
+    }
+
+}
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 751px) and (max-width: 1200px){
+
+    .Inicio-Lista_enlaces{
+
+        height: 200px;
+        font-size: 1.7em;
+        
+    }
+
+    .Login{
+
+        display: flex;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        font-size: 15px;
+    
+    }
+    
+    .Login div{
+    
+        width: 100%;
+    
+    }
+    
+    .Login p{
+    
+        margin: 10px 0;
+        width: 100%;
+    
+    }
+
+    #Inicio-presentacion{
+
+        flex-direction: column;
+        height: max-content;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .Inicio-presentacion-Texto_Informativo{
+
+        width: 90%;
+        margin: 50px 0;
+        font-size: 30px;
+        text-align: center;
+
+    }
+
+    .Inicio-presentacion-imagen_informativa{
+
+        width: 90%;
+        margin: 40px 0;
+        height: 600px
+
+    }
+
+    footer h2{
+
+        font-size: 30px;
+        margin: 10px 0;
+        
+    }
+
+    footer > ul{
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    footer > ul > li{
+
+        font-size: 20px;
+
+    }
+
+}
+
+/* --------------------------------------------------------- Para pantallas grandes-----------------------------------------*/
+
+@media (min-width: 1700px){
+
+    .Inicio-Lista_enlaces{
+
+        height: 210px;
+        font-size: 2.7em
+        
+    }
+
+    .Login{
+
+        width: 100px;
+        height: 100px;
+        font-size: 0.5em;
+        text-align: center;
+    
+    }
+
+    .Login div{
+
+        width: 100%;
+        text-align: center;
+    
+    }
+
+    .Login p{
+
+        margin: 20px 0;
+        width: 100%;
+        text-align: center;
+    
+    }
+
+    .Logo{
+
+        width: 150px; 
+        height: 150px; 
+    
+    }
+
+    .Inicio-presentacion-Texto_Informativo{
+        font-size: 2.4em;
+    }
+
+}

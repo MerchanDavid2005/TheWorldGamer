@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+body{
+
+    background: #000;
+    color: white;
+
+}
+
+/* ---------------------------------------------------- Portada ---------------------------------------*/
+
+#Entrada-Div_portada{
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 50vh;
+
+}
+
+.Entrada-Div_portada-Portada{
+
+    width: max-content;
+    font-size: 8em;
+    color: #F00;
+
+}
+
+span{
+
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: #000;
+    animation: escribir 3s steps(30) infinite alternate;
+
+}
+
+h1{
+
+    transition: color 0.5s;
+
+}
+
+h1:hover{
+
+    color: #fff;
+
+}
+
+/* -------------------------------------------------------- Ingresar -------------------------------------------*/
+
+#Entrada-Div_boton{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+   
+}
+
+.Entrada-Div_boton-Enlace{
+
+    text-decoration: none;
+    width: max-content;
+    background: transparent;
+    border: 0px;
+    color: #F00;
+    font-size: 5em;
+    transition: color 0.5s;
+    
+}
+
+.Entrada-Div_boton-Enlace:hover{
+
+    color: #fff;
+
+}
+
+/* ----------------------------------------------------- Animaciones ---------------------------------------*/
+
+@keyframes escribir {
+
+    0%{
+        width: 100%;
+    }
+
+    100%{
+        width: 0%;
+    }
+    
+}
+
+/* --------------------------------------------------- Responsive ---------------------------------------------------*/
+
+/* ------------------------------------------------------------------------------------------------------------------*/
+
+@media (max-width:700px){
+
+    .Entrada-Div_portada-Portada{
+
+        width: max-content;
+        font-size: 4em;
+        color: #F00;
+        text-align: center;
+    
+    }
+    
+
+}
+
+@media (min-width:701px) and (max-width: 1200px){
+
+    .Entrada-Div_portada-Portada{
+
+        width: max-content;
+        font-size: 6em;
+        color: #F00;
+        text-align: center;
+    
+    }
+    
+
+}

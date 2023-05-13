@@ -1,0 +1,34 @@
+<html>
+    <head>
+
+        <title> {% block title %} Bienvenido {% endblock %} </title>
+
+        {% load static %} 
+
+        <link rel="stylesheet" href="{% static 'css/entrada.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="{% static 'img/Iconos/logo.ico' %}">
+
+    </head>
+    <body>
+
+        <div id="Entrada-Div_portada">
+
+            <h1 class="Entrada-Div_portada-Portada"> Bienvenido Gamer <span>&#160;</span> </h1>
+
+        </div>
+
+        <div id="Entrada-Div_boton"> 
+            
+            <a href="Inicio/" class="Entrada-Div_boton-Enlace"> 
+
+                Continuar 
+
+            </a> 
+        
+        </div>
+
+    </body>
+</html>

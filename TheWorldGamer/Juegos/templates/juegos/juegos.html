@@ -1,0 +1,134 @@
+{% extends 'inicio/inicio.html' %}
+
+{% block content %} 
+
+<html>
+    <head>
+
+        <title> {% block title %} Juegos {% endblock %} </title>
+
+        {% load static %} 
+
+        <link rel="stylesheet" href="{% static 'css/juegos.css'%}">
+
+    </head>
+    <body>
+
+        <div id="juegos-todo">
+
+            <div class="juegos-todo-menu">
+
+                <h1 class="juegos-todo-menu-Buscar"> Buscar </h1>
+
+                <form action="/Resultado/" method="POST"> {% csrf_token %}
+
+                    <input class="buscador_de_juegos" type="text" name="busqueda" placeholder="Ingresa el juego">
+
+                    <input class="juegos-todo-menu-form-boton_enviar" type="submit" value="Buscar">
+
+                </form>
+                
+                <h1> Filtros </h1>
+
+                <h2> Categorias </h2>
+
+                <ul class="juegos-todo-menu-lista_Categorias">
+                    
+                    <form id="Filtros" action="/Categoria/" method="POST"> {% csrf_token %}
+
+                        <input class="boton_cambio" type="button" value="Todo"> 
+                            
+                        <input class="boton_cambio" type="button" value="Terror"> 
+                            
+                        <input class="boton_cambio" type="button" value="Shooter"> 
+                            
+                        <input class="boton_cambio" type="button" value="Accion"> 
+                            
+                        <input class="boton_cambio" type="button" value="Aventura"> 
+                            
+                        <input class="boton_cambio" type="button" value="Rol"> 
+                            
+                        <input class="boton_cambio" type="button" value="Deportes"> 
+                            
+                        <input class="boton_cambio" type="button" value="Plataformero"> 
+
+                        <input class="Categoria" type="hidden" name="Categoria" >
+                        
+                    </form>
+        
+                </ul>
+                
+            </div>
+
+            <div class="juegos-todo-juegos">
+
+                <p style="color: #fff; font-size: 30px;"> {{mensaje}} </p>
+                <p style="color: #fff; font-size: 30px;"> {{categoria}} </p>
+                <p class="alquilado" style="color: #0d0; font-size: 30px;"> {{alquilado}} </p> 
+
+                {% for i in juegos %}
+                
+                    <div class="juegos-todo-juegos-game">
+
+                        <h1 class="juegos-todo-juegos-game-Nombre{{i.id}}"> {{i.Nombre}} </h1>
+                        <h2 class="juegos-todo-juegos-game-Seccion{{i.id}}"> {{i.Seccion}} </h2>
+                        <div class="juegos-todo-juegos-game-imagen_juego{{i.id}}">
+                            <img class="juegos-todo-juegos-game-imagen_juego-img{{i.id}}" src="{{i.Imagen.url}}" alt="juego">
+                        </div>
+
+                        <p> Precio: <b class="Precio{{i.id}}"> {{i.Precio}} </b> </p>
+
+                        {% if user.is_authenticated %}
+
+                            <form class="formulario-compra" action=""> 
+        
+                                <select class="selector-alquilar{{i.id}}" name="tiempo_limite" precio="{{i.Precio}}">
+                                    <option value="value1" selected> 7 dias </option>
+                                    <option value="value2"> 15 dias</option>
+                                    <option value="value3"> 1 mes </option>
+                                    <option value="value4"> 3 meses </option>
+                                    <option value="value5"> 6 meses </option>
+                                    <option value="value6"> 1 año </option>
+                                </select>
+                        
+                            <input class="juegos-todo-juegos-game-boton_alquilar{{i.id}}" type="button" value="Alquilar">
+
+                        {% else %}
+
+                            <b class="Texto_iniciar_sesion"> Para alquilar un juego primero debes iniciar sesion </b>
+                            <a href="/Iniciar_sesion/"> 
+
+                                <button class="ir_a_registrarse"> Iniciar sesion </button>
+
+                            </a>
+
+                        {% endif %}
+
+
+
+                        </form>
+
+                    </div>
+                
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+        <form class="formulario_confirmado" method="POST">
+
+            {% csrf_token %}
+
+            <input type="hidden" name="usuario" value="{{user.username}}"> 
+            <input type="hidden" name="usuario_id" value="{{user.id}}"> 
+
+        </form>
+
+        <script src="{% static 'js/juegos.js' %}"> </script>
+    </body>
+</html>
+
+
+
+{% endblock %}

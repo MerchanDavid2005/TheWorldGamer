@@ -1,0 +1,43 @@
+{% extends 'inicio/inicio.html' %}
+
+{% block content %} 
+
+<html>
+    <head>
+
+        <title> {% block title %} Iniciar sesion {% endblock %} </title>
+
+        {% load static %} 
+
+        <link rel="stylesheet" href="{% static 'css/logear.css' %}">
+
+    </head>
+    <body>
+
+        <div id="Cuerpo_login"> 
+
+            <form class="formulario-login" method="POST"> {% csrf_token %}
+
+                {% if messages %}
+
+                    {% for mensaje in messages %}
+                    
+                        <b class="error"> {{mensaje}} </b>
+                    
+                    {% endfor %}
+                
+                {% endif %}
+
+                {{form}}
+    
+                <input id="boton-logeo" type="submit" value="Iniciar sesion">
+                <a class="registrarse" href="/Registrarse/"> Registrarse </a>
+    
+            </form>
+
+        </div>
+    
+    </body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,132 @@
+{% extends 'inicio/inicio.html' %}
+
+{% block content %} 
+
+<html>
+    
+    <head>
+
+        <title> {% block title %} Pedidos {% endblock %} </title>
+
+        {% load static %} 
+
+        <link rel="stylesheet" href="{% static 'css/pedidos.css'%}">
+
+    </head>
+
+    <body>
+
+        {% if Mensaje != None %}
+
+            <div id="Cuadro-Mensaje_pedido">
+                <p class="Mensaje"> {{Mensaje}} </p>
+                <a href="/Pedidos/"> 
+                    <button class="Continuar">Continuar</button>
+                </a>
+            </div>
+
+        {% endif %}
+
+        <div id="Cuadro-Mensaje" style="margin: auto; color: #0ff; font-size: 30px; width: 500px; height: 130px;">
+            <p class="Validar"></p>
+        </div>
+
+        <div id="Todo">
+
+            <div id="pedido-todo">
+    
+                <div class="imagen-pedido">
+    
+                    <img class="imagen" src="{% static 'img/Yo/Logo.png' %}" alt="Foto" >
+    
+                </div>
+
+                <div class="info-pedido">
+    
+                    <form style="color: white;" id="Formulario-pedido" action="/Pedido_creado/" method="POST" enctype="multipart/form-data"> 
+                        {% csrf_token %} 
+                        <h1>Nombre</h1>
+                        <p>Ingresa el nombre del videojuego <span> (Por favor escribe todo el nombre del juego) </span></p>
+                        <input class="Nombre-juego" type="text" placeholder="Ingresa el nombre del juego" name="Nombre_pedido">
+                        <h1>Imagen</h1>
+                        <p>Ingresa una imagen del juego para poder buscarlo <span>  (Por favor no envies contenido inapropieado) </span> </p>
+                        <input class="archivo" type="file" name="Imagen_pedido" accept="image/*">
+                        <span>Asegurate de tener los datos correctamente</span>
+                        <input type="hidden" name="usuario_nombre" value="{{user.username}}">
+                        <input type="hidden" name="usuario_id" value="{{user.id}}">
+                        {% if user.is_authenticated %}
+
+                            <a href="#Cuadro-Mensaje">
+                                <input class="enviar" type="button" value="Realiza pedido"> 
+                            </a>
+                            </form>
+
+                        {% else %}
+
+                            </form>
+                            <b class="Texto_iniciar_sesion"> Para pedir un juego primero debes iniciar sesion </b>
+                            <a href="/Iniciar_sesion/"> 
+
+                                <button class="ir_a_registrarse"> Iniciar sesion </button>
+
+                            </a>    
+
+                        {% endif %}
+
+                   
+    
+                </div>
+    
+            </div>
+
+        </div>
+
+        <h1 class="titulo_mas_populares"> {{Mensaje_juegos}} </h1>
+
+        <div id="Pedidos">
+
+            {% for i in Pedidos %}
+            
+                <div class="Mejores-juegos">
+
+                    <h1> Nombre: </h1>
+                    <b> {{i.Nombre_pedido}} </b>
+                    <div class="Mayor-pedido-img">
+                        <img src="{{i.Imagen_pedido.url}}" alt="Pedido">
+                    </div>
+                    <p> Numero de pedidos: <b> {{i.Numero_pedido}} </b> </p>
+                    <p> Su ultima actualizacion fue: <b> {{i.Actualizacion_pedido}} </b> </p>
+
+                    {% if user.is_authenticated %}
+
+                        <form action="/Dar_voto/{{i.Nombre_pedido}}" method="POST"> {% csrf_token %}
+                            <input type="hidden" name="usuario_nombre" value="{{user.username}}">
+                            <input type="hidden" name="usuario_id" value="{{user.id}}">
+                            <input class="Dar_voto" type="submit" value="Pedir">
+                        </form>
+
+                    {% else %}
+
+                        <b class="Texto_iniciar_sesion"> Para votar por un juego primero debes iniciar sesion </b>
+                        <a href="/Iniciar_sesion/"> 
+
+                            <button class="ir_a_registrarse"> Iniciar sesion </button>
+
+                        </a>    
+
+                    {% endif %}
+
+
+                </div>
+    
+            {% endfor %}
+
+        </div> 
+
+        <script src="{% static 'js/pedidos.js' %}"> </script>
+        
+    </body>
+
+</html>
+
+{% endblock %}

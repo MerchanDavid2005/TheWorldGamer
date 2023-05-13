@@ -1,0 +1,94 @@
+{% extends 'inicio/inicio.html' %}
+
+{% block content %}
+
+    <html>
+
+        <head>
+
+            <title> {% block title %} Quien soy {% endblock %} </title>
+
+                {% load static %} 
+
+                <link rel="stylesheet" href="{% static 'css/yo.css'%}">
+
+        </head>
+
+        <body>
+
+            <div id="Yo-Todo">
+
+                <div class="Yo-Todo-Texto_informal"> 
+
+                    <h1 class="Yo-Todo-Texto_informal-titulo"> David </h1>
+
+                    <p class="Yo-Todo-Texto_informal-texto"> Hola, mi nombre es David, soy un joven estudiante con amor hacia el desarrollo web como fullstack, esta pagina web
+                        es mi primer proyecto usando las tecnologias de Django, javascript, python, css y html, espero la disfrutes y me puedas
+                        dejar una opinion sobre mi proyecto
+
+                    </p>
+
+                </div>
+
+                <div class="Yo-Todo-Texto_informal-texto2"> 
+
+                    <h1 class="Yo-Todo-texto_informal-texto2-titulo"> ¿Por que esta pagina? </h1>
+
+                    <p class="Yo-Todo-texto_informal-texto2-parrafo"> Esta pagina esta orientada para el publico gamer que desea adquirir de forma sencilla juegos 
+                        en su computadora de diferentes plataformas como pueden ser de play, nintendo, xbox etc, ademas de esto podras tambien tener la opinion
+                        de que juego traer a esta pagina para tener acceso a el
+                    </p>
+
+                </div>
+            
+            </div>
+
+            <div id="Yo-Todo2">
+                
+                <div class="Yo-Todo2-Texto_informal-texto">
+
+                    <h1 class="Yo-Todo2-Texto_informal-texto-titulo"> Instrucciones </h1>
+
+                    <p class="Yo-Todo2-Texto_informal-texto-parrafo"> 
+                        
+                        <ol>
+
+                            <li> Dale click al icono de iniciar sesion que esta arriba en la izquierda </li>
+                            <li> Si no tienes una cuenta dale click en "Registrarse" </li>
+                            <li> Rellena el campo que te saldra llamado "Nombre de usuario" escribiendo tu nombre de usuario </li>
+                            <li> Rellena el campo de contraseña y luego en el siguiente campo verificalo </li>
+
+                        </ol>
+
+                    </p>
+
+                </div>
+
+                <div class="Yo-Todo2-Texto_informal-texto2">
+
+                    <h1 class="Yo-Todo2-Texto_informal-texto2-titulo"> Ayuda </h1>
+
+                    <p class="Yo-Todo2-Texto_informal-texto2-parrafo">
+
+                        Si tienes alguna duda especifica que requieras no dudes en contactarme por mi email o bien por mi numero que podras encontrar
+                        en el pie de pagina de cada pestaña
+
+                    </p>
+
+                    <div class="logo">
+                        <a href="/Inicio/">
+
+                            <img class="imagen-logo" src="{% static 'img/Yo/Logo.png' %}" alt="Logo"> 
+
+                        </a> 
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </body>
+
+    </html>
+
+{% endblock %}

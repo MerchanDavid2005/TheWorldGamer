@@ -1,0 +1,312 @@
+.titulo-historial{
+
+    text-align: center;
+    color: #0f5;
+    margin: 50px 0;
+
+}
+
+#todo-historial{
+
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.historial{
+
+    width: 95%;
+    height: max-content;
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+.juegos{
+
+    width: 340px;
+    height: 670px;
+    color: #fff;
+    margin: 20px 0;
+    text-align: center;
+
+}
+
+.juegos > h1{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 130px;
+    margin: 30px 0;
+    color: #df4;
+
+}
+
+.juegos > h2, p{
+
+    margin: 20px 0;
+
+}
+
+.juegos b{
+
+    margin: 20px;
+    color: #df4;
+
+}
+
+.imagen-juego{
+
+    width: 100%;
+    height: 40%;
+    margin: 10px 0;
+
+}
+
+.filtros{
+
+    position: sticky;
+    top: 5px;
+    width: 25%;
+    height: 100vh;
+    margin: 0 20px;
+
+}
+
+.filtros > h2{
+
+    color: #df4;
+    margin: 25px 0;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+.busqueda > input{
+
+    text-align: center;
+    height: 40px;
+
+}
+
+.buscar_juego{
+
+    width: 70%;
+
+}
+
+.boton_buscar_juego{
+
+    width: 20%;
+
+}   
+
+.categoriasHistorial{
+
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.categoriasHistorial input{
+
+    width: 100%;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    margin: 5px 0 5px 20px;
+    text-align: left;
+    transition-property: transform color;
+    transition-duration: 0.5s;
+
+}
+
+.categoriasHistorial input:hover{
+
+    cursor: pointer;
+    color: #df4;
+    transform: scale(1.1);
+
+}
+
+.tiempos > ul{
+
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+}
+
+.tiempos input{
+
+    display: flex;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    margin: 5px 5px;
+    text-align: left;
+    transition-property: transform color;
+    transition-duration: 0.5s;    
+
+}
+
+.tiempos input:hover{
+
+    cursor: pointer;
+    color: #df4;
+    transform: scale(1.1);
+
+}
+
+/* ------------------------------------------------------------------- Responsive --------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 900px){
+
+    .historial{
+
+        margin: 15px 0;
+    
+    }
+    
+    .juegos{
+    
+        width: 340px;
+        height: 670px;
+        color: #fff;
+        margin: 20px 0;
+        text-align: center;
+    
+    }
+    
+    .juegos > h1{
+   
+        height: 100px;
+        margin: 15px 0;
+        font-size: 1.1em;
+    
+    }
+    
+    .juegos > h2, p{
+    
+        margin: 10px 0;
+        font-size: 0.9em;
+    
+    }
+    
+    .juegos b{
+    
+        margin: 20px;
+        color: #df4;
+        font-size: 0.9em;
+    
+    }
+    
+    .imagen-juego{
+    
+        width: 100%;
+        height: 40%;
+        margin: 10px 0;
+    
+    }
+
+}
+
+@media (min-width: 1700px){
+
+    .titulo-historial{
+
+        text-align: center;
+        color: #0f5;
+        margin: 80px 0;
+        font-size: 40px;
+    }
+
+    .filtros{
+
+        width: 30%;
+        top: 10px;
+        margin: 0 20px;
+    
+    }
+
+    .juegos{
+    
+        width: 350px;
+        height: 700px;
+
+    }
+
+    .juegos > h1{
+
+        font-size: 35px;
+        height: 130px;
+        margin: 30px 0;
+        color: #df4;
+    
+    }
+
+    .juegos > h2{
+
+        font-size: 30px;
+
+    }
+    
+    .juegos > p{
+    
+        font-size: 20px;
+    
+    }
+    
+    .juegos b{
+    
+        margin: 20px;
+        color: #df4;
+    
+    }
+    
+    .imagen-juego{
+    
+        width: 100%;
+        height: 40%;
+        margin: 10px 0;
+    
+    }
+
+    .categoriasHistorial{
+
+        width: 100%;
+        height: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    
+    }
+
+    .categoriasHistorial input{
+
+        font-size: 25px;
+        margin: 10px 0 10px 20px;
+
+    
+    }
+
+    .tiempos input{
+
+        font-size: 25px;
+        margin: 15px 10px; 
+    
+    }
+
+}
+

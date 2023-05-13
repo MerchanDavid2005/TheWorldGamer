@@ -1,0 +1,104 @@
+{% extends 'inicio/inicio.html' %}
+
+{% block content %}
+
+    <html>
+
+        <head>
+
+            <title> {% block title %} {{user.username}} {% endblock %} </title>
+
+                {% load static %} 
+
+                <link rel="stylesheet" href="{% static 'css/historial.css'%}">
+
+        </head>
+
+        <body>
+
+            <h1 class="titulo-historial"> {{mensaje}} </h1>
+
+            {% if alerta != None %}
+            
+                <h1 class="titulo-historial"> {{alerta}} </h1>
+
+            {% endif %}
+
+            <div id="todo-historial">
+
+                <div class="historial">
+
+                    {% for i in historial %} 
+
+                    <div class="juegos">
+
+                        <h1> {{i.Juego}} </h1>
+                        <h2> {{i.Seccion}} </h2>
+                        <div class="imagen-juego">
+                            <img src="{{i.Img.url}}" alt="Juego">
+                        </div>
+                        <p> Por un precio de: <b> {{i.Precio}} </b> </p>
+                        <p> Por un tiempo de: <b> {{i.Tiempo}} </b> </p>
+                        <p> El dia de: <b> {{i.actualizacion}} </b> </p>
+                        <p> Numero de veces alquilado: <b> {{i.alquiladas}} </b> </p> 
+
+                    </div>
+
+                {% endfor %}
+
+                </div>
+
+                <div class="filtros">
+
+                    <h2>Buscar</h2>
+
+                    <form class="busqueda" action="/Busqueda/" method="POST"> {% csrf_token %}
+                        <input class="buscar_juego" name="juego" type="text" placeholder="Ingresa el juego">
+                        <input type="hidden" name="id_usuario" value="{{user.id}}">
+                        <input class="boton_buscar_juego" type="submit" value="Buscar">
+                    </form>
+
+                    <h2> Categorias </h2>
+
+                    <form class="categoriasHistorial" action="/Categoria_historial/" method="POST"> {% csrf_token %}
+                        <ul>
+                            <li><input class="boton_categoria" type="button" value="Todo"></li>
+                            <li><input class="boton_categoria" type="button" value="Terror"></li>
+                            <li><input class="boton_categoria" type="button" value="Shooter"></li>
+                            <li><input class="boton_categoria" type="button" value="Accion"></li>
+                            <li><input class="boton_categoria" type="button" value="Aventura"></li>
+                            <li><input class="boton_categoria" type="button" value="Rol"></li>
+                            <li><input class="boton_categoria" type="button" value="Deportes"></li>
+                            <li><input class="boton_categoria" type="button" value="Plataformero"></li>
+                            <input class="campo_Categoria" type="hidden" name="Categoria_historial">
+                            <input type="hidden" name="id_usuario" value="{{user.id}}">
+                        </ul>
+                    </form>
+
+                    <h2> Limite de tiempo </h2>
+
+                    <form class="tiempos" action="/Plazo/" method="POST"> {% csrf_token %}
+                        <ul>
+                            <li><input class="boton_limite" type="button" value="Todos"></li>
+                            <li><input class="boton_limite" type="button" value="7 dias"></li>
+                            <li><input class="boton_limite" type="button" value="15 dias"></li>
+                            <li><input class="boton_limite" type="button" value="1 mes"></li>
+                            <li><input class="boton_limite" type="button" value="3 meses"></li>
+                            <li><input class="boton_limite" type="button" value="6 meses"></li>
+                            <li><input class="boton_limite" type="button" value="1 año"></li>
+                            <input class="campo_limite" type="hidden" name="limite_historial">
+                            <input type="hidden" name="id_usuario" value="{{user.id}}">
+                        </ul>
+                    </form>
+
+                </div>
+
+            </div>
+
+            <script src="{% static 'js/historial.js'%}"></script>
+
+        </body> 
+
+    </html>
+
+{% endblock %}

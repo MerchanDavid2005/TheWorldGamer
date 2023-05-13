@@ -1,0 +1,294 @@
+body{
+
+    background: #000;
+    
+}
+
+/* --------------------------------------------------------------- Recuadro 1 ----------------------------------*/
+
+#Yo-Todo{
+
+    display: flex;
+    width: 95%;
+    margin: 78px 15px;
+    height: max-content;
+
+}
+
+#Yo-Todo > div{
+
+    width: 50%;
+    margin: 0px 20px;
+    font-size: 1.6em;
+    transition-property: transform;
+    transition-duration: 0.5s;
+
+}
+
+#Yo-Todo > div:hover{
+
+    transform: scale(1.05);
+
+}
+
+.Yo-Todo-Texto_informal-titulo{
+
+    color: #f00;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.Yo-Todo-Texto_informal-texto{
+
+    color: #fff;
+    padding: 20px;
+
+}
+
+.Yo-Todo-texto_informal-texto2-titulo{
+
+    color: #f00;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.Yo-Todo-texto_informal-texto2-parrafo{
+
+    color: #fff;
+    padding: 20px;
+
+}
+
+/* --------------------------------------------------------------- Recuadro 2 ----------------------------------*/
+
+#Yo-Todo2{
+
+    display: flex;
+    width: 95%;
+    margin: 78px 15px;
+    height: max-content;
+
+}
+
+
+#Yo-Todo2 > div{
+
+    width: 50%;
+    margin: 0px 20px;
+    font-size: 1.6em;
+    transition-property: transform;
+    transition-duration: 0.5s;
+
+}
+
+#Yo-Todo2 > div:hover{
+
+    transform: scale(1.05);
+    
+}
+
+.Yo-Todo2-Texto_informal-texto-titulo{
+
+    color: #f00;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.Yo-Todo2-Texto_informal-texto{
+
+    color: #fff;
+    padding: 20px;
+
+}
+
+.Yo-Todo2-Texto_informal-texto2-titulo{
+
+    color: #f00;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.Yo-Todo2-Texto_informal-texto2-parrafo{
+
+    color: #fff;
+    padding: 20px;
+
+}
+
+.logo{
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.imagen-logo:hover{
+
+    animation-name: animacionLogo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes animacionLogo {
+    
+    0%{
+        transform: scale(1) rotateY(0deg);
+    }
+
+    100%{
+        transform: scale(1.3) rotateY(360deg);
+    }
+}
+
+/* ----------------------------------------------------------------------- Responsive ------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+@media (max-width: 550px){
+
+    #Yo-Todo{
+
+        flex-direction: column;
+        margin: 20px auto;
+    
+    }
+
+    #Yo-Todo > div{
+
+        font-size: 0.9em;
+        width: 85%;
+        margin: 10px auto;
+        text-align: center;
+     
+    }
+
+    #Yo-Todo2{
+
+        flex-direction: column;
+        margin: 20px auto;
+    
+    }
+    
+    
+    #Yo-Todo2 > div{
+    
+        width: 85%;
+        font-size: 0.9em;
+        margin: 10px auto;
+        text-align: center;
+    
+    }
+
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+@media (min-width: 551px) and (max-width: 750px){
+
+    #Yo-Todo{
+
+        flex-direction: column;
+        margin: 20px auto;
+    
+    }
+
+    #Yo-Todo > div{
+
+        font-size: 1.25em;
+        width: 85%;
+        margin: 10px auto;
+        text-align: center;
+     
+    }
+
+    #Yo-Todo2{
+
+        flex-direction: column;
+        margin: 20px auto;
+    
+    }
+    
+    
+    #Yo-Todo2 > div{
+    
+        width: 85%;
+        font-size: 1.25em;
+        margin: 10px auto;
+        text-align: center;
+    
+    }
+
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+@media (min-width: 751px) and (max-width: 1200px){
+
+    #Yo-Todo{
+
+        flex-direction: column;
+        margin: 20px auto;
+    
+    }
+
+    #Yo-Todo > div{
+
+        font-size: 1.4em;
+        width: 85%;
+        margin: 10px auto;
+        text-align: center;
+     
+    }
+
+    #Yo-Todo2{
+
+        flex-direction: column;
+        margin: 20px auto;
+    
+    }
+    
+    
+    #Yo-Todo2 > div{
+    
+        width: 85%;
+        font-size: 1.4em;
+        margin: 10px auto;
+        text-align: center;
+    
+    }
+
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+@media (min-width: 1700px){
+
+    #Yo-Todo > div{
+
+        font-size: 2.1em;
+    
+    }
+
+    #Yo-Todo2 > div{
+
+        height: 800px;
+        font-size: 2.1em;
+
+    }
+
+    .logo{
+
+        display: flex;
+        justify-content: center;
+        height: 60%;
+        width: 100%;
+    }
+    
+}

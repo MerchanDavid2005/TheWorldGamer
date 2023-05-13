@@ -1,0 +1,577 @@
+body{
+
+    background: #000;
+
+}
+
+h1{
+
+    color: #f00;
+
+}
+
+/* --------------------------------------------------------------------- Menu y filtros ------------------------------------- */
+
+#juegos-todo{
+
+    width: 100%;
+    height: max-content;
+    margin: 30px 20px 30px 0;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.juegos-todo-menu{
+
+    margin-left: 30px;
+    width: 20%;
+    height: 100vh;
+    padding-top: 40px;
+    color: #ddd;
+    position: sticky;
+    top: 0;
+
+}
+
+.juegos-todo-menu-Buscar{
+
+    margin: 20px 0;
+
+}
+
+.juegos-todo-menu > form input{
+
+    margin: 20px auto;
+    height: 40px;
+    border: 0px solid 000;
+    border-radius: 7px;
+    font-size: 13px;
+    text-align: center;
+
+}
+
+.buscador_de_juegos{
+
+    width: 200px;
+
+}
+
+.juegos-todo-menu-form-boton_enviar{
+
+    width: 80px;
+
+}
+
+.juegos-todo-menu > h2{
+
+    font-size: 30px;
+    text-align: center;
+    margin: 35px 0;
+    color: #f00;
+
+}
+
+.juegos-todo-menu ul{
+
+    list-style: none;
+}
+
+.juegos-todo-menu > ul input{
+
+    display: block;
+    margin: 20px 0 0 15px;
+    font-size: 20px;
+    transition-property: transform color;
+    transition-duration: 0.5s;
+    background: transparent;
+    border: none;
+    color: #fff;
+
+}
+
+.juegos-todo-menu > ul input:hover{
+
+    transform: scale(1.3);
+    color: #f00;
+    cursor: pointer;
+
+}
+
+/* ----------------------------------------------------------------------- Videojuegos ------------------------------- */
+
+.juegos-todo-juegos{
+
+    width: 70%;
+    height: max-content;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+.juegos-todo-juegos-game{
+
+    padding: 10px 0;
+    width: 350px;
+    height: max-content;
+    color: #ddd;
+    transition: transform;
+    transition-duration: 0.5s;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.juegos-todo-juegos-game:hover{
+
+    transform: scale(1.07);
+
+}
+
+.juegos-todo-juegos-game > h1, h2, p{
+
+    margin: 20px 0;
+    text-align: center;
+    width: 100%;
+
+}
+
+.juegos-todo-juegos-game > h1{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    font-size: 40px;
+
+}
+
+.juegos-todo-juegos-game > div{
+
+    width: 250px;
+    height: 250px;
+
+}
+
+.juegos-todo-juegos-game b{
+
+    color: #0f0;
+
+}
+
+select{
+
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    border: 0;
+
+}
+
+.formulario-compra > input{
+
+    width: 100%;
+    margin: 15px 0;
+    font-size: 20px;
+    height: 60px;
+    padding: 10px 20px;
+    background: #0a0;
+
+}
+
+.Texto_iniciar_sesion{
+
+    font-size: 15px;
+
+}
+
+.ir_a_registrarse{
+
+    width: 100%;
+    margin: 15px 0;
+    font-size: 20px;
+    height: 60px;
+    padding: 10px 20px;
+    background: #0a0;
+    
+}
+
+/* ------------------------------------------------------------------ Confirmador ----------------------------- */
+
+.Div-confirmacion{
+
+    padding: 20px;
+    display: flex;
+    background-color: #ddd;
+    width: 600px;
+    height: 350px;
+    position: fixed;
+    top: 23%;
+    left: 30%;
+    z-index: 1000;
+    outline: 3px double #000;
+
+}
+
+.informacion-confirmacion{
+
+    padding: 20px 5px;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+
+}
+
+.informacion-confirmacion b{
+
+    color: #0a0;
+
+}
+
+.imagen-confirmacion{
+
+    padding: 0 5px;
+    width: 50%;
+    height: 100%;
+
+}
+
+.Div-confirmacion input{
+
+    width: 80%;
+    font-size: 20px;
+    height: 50px;
+    background: #0f0;
+    margin: 10px 0;
+
+}
+
+.Cerrar{
+
+    position: absolute;
+    background: #f00;
+    top: -15px;
+    right: -15px;
+    width: 35px;
+    height: 30px;
+    font-size: 20px;
+    color: #fff;
+
+}
+
+/* ------------------------------------------------------------- Responsive ----------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+@media (max-width: 750px){
+
+    h1{
+
+        font-size: 1.3em;
+
+    }
+    
+    .juegos-todo-menu{
+    
+        width: 40%;
+
+    
+    }
+    
+    .juegos-todo-menu > form input{
+    
+        font-size: 0.5em;
+    
+    }
+
+    .buscador_de_juegos{
+
+        width: 100px;
+
+    }
+
+    .juegos-todo-menu-form-boton_enviar{
+
+        width: 60px;
+
+    }
+
+    .juegos-todo-menu > h2{
+
+        font-size: 0.9em;
+        margin: 20px 0;
+
+    }
+
+    .juegos-todo-menu > ul input{
+
+        font-size: 0.8em;
+
+    }
+
+    .juegos-todo-juegos{
+
+        width: 55%;
+    
+    }
+
+    .juegos-todo-juegos-game{
+
+        padding: 10px 0;
+        width: 150px;
+        margin: 0 20px;
+    
+    }
+    
+    .juegos-todo-juegos-game > h2, p{
+    
+        margin: 10px 0;
+        text-align: center;
+        width: 100%;
+        font-size: 0.9em;
+    
+    }
+    
+    .juegos-todo-juegos-game > h1{
+
+        height: 20px;
+        font-size: 1.3em;
+    
+    }
+    
+    .juegos-todo-juegos-game > div{
+    
+        width: 150px;
+        height: 100px;
+    
+    }
+
+    select{
+
+        width: 100%;
+        height: 30px;
+        font-size: 0.7em;
+    
+    }
+    
+    .formulario-compra > input{
+    
+        width: 100%;
+        margin: 15px 0;
+        font-size: 0.7em;
+        height: 50px;
+    
+    }
+    
+    .Texto_iniciar_sesion{
+    
+        font-size: 0.7em;
+    
+    }
+    
+    .ir_a_registrarse{
+    
+        font-size: 0.7em;
+        height: 50px;
+   
+    }
+
+    .Div-confirmacion{
+
+        padding: 10px;
+        width: 500px;
+        height: 300px;
+        top: 30%;
+        left: 15%;
+    
+    }
+    
+    .imagen-confirmacion{
+    
+        padding: 0 5px;
+        width: 50%;
+        height: 100%;
+    
+    }
+    
+    .Div-confirmacion input{
+    
+        font-size: 0.7em;
+        height: 30px;
+    
+    }
+    
+    .Cerrar{
+    
+        top: -10px;
+        right: -10px;
+        width: 25px;
+        height: 25px;
+        font-size: 0.7em;
+        
+    }
+
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+@media (min-width: 751px) and (max-width: 800px){
+
+    .Div-confirmacion{
+
+        padding: 10px;
+        width: 500px;
+        height: 300px;
+        top: 30%;
+        left: 15%;
+    
+    }
+    
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+@media (min-width: 801px) and (max-width: 900px){
+
+    .Div-confirmacion{
+
+        padding: 10px;
+        width: 500px;
+        height: 300px;
+        top: 30%;
+        left: 20%;
+    
+    }
+    
+}
+
+@media (min-width: 901px) and (max-width: 1200px){
+
+    .Div-confirmacion{
+
+        padding: 10px;
+        width: 500px;
+        height: 300px;
+        top: 30%;
+        left: 25%;
+    
+    }
+    
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+@media (min-width: 1700px) {
+
+    /* ------------------------------------------------------- Menu y filtros ----------------------------------- */
+
+    h1{
+
+        font-size: 40px
+
+    }
+
+    .juegos-todo-menu{
+
+        width: 30%;
+        padding-top: 40px;
+        margin-left: 5%;
+
+    }
+
+    .juegos-todo-menu > form input{
+
+        margin: 35px auto;
+        height: 50px;
+        border: 0px solid 000;
+        border-radius: 7px;
+        font-size: 16px;
+        text-align: center;
+    
+    }
+
+    .buscador_de_juegos{
+
+        width: 350px;
+    
+    }
+
+    .juegos-todo-menu-form-boton_enviar{
+
+        width: 110px;
+    
+    }
+
+    .juegos-todo-menu > h2{
+
+        font-size: 30px;
+        text-align: center;
+        margin: 40px 0;
+        color: #f00;
+    
+    }
+
+    .juegos-todo-menu > ul input{
+
+        display: block;
+        margin: 30px 0 0 15px;
+        font-size: 25px;
+        transition-property: transform color;
+        transition-duration: 0.5s;
+        background: transparent;
+        border: none;
+        color: #fff;
+    
+    }
+
+    /* --------------------------------------------------------------- Div confirmacion ----------------------------- */
+    
+    .Div-confirmacion{
+
+        width: 800px;
+        height: 500px;
+        top: 20%;
+        left: 27%;
+        font-size: 23px;
+
+    }
+
+    .informacion-confirmacion{
+
+        padding: 40px 10px;
+        width: 50%;
+        height: 100%;
+    
+    }
+
+    .informacion-confirmacion > h1, h2, p{
+
+        margin: 20px 0;
+    }
+
+    .Div-confirmacion input{
+
+        width: 80%;
+        font-size: 25px;
+        height: 70px;
+        background: #0f0;
+        margin: 45px 0;
+    
+    }
+
+    .Cerrar{
+
+        position: absolute;
+        background: #f00;
+        top: -15px;
+        right: -15px;
+        width: 45px;
+        height: 40px;
+        font-size: 25px;
+        color: #fff;
+    
+    }
+
+}

@@ -1,0 +1,76 @@
+{% extends 'inicio/inicio.html' %}
+
+{% block content %} 
+
+<html>
+    <head>
+
+        <title> {% block title %} Contactame {% endblock %} </title>
+
+        {% load static %} 
+
+        <link rel="stylesheet" href="{% static 'css/contacto.css'%}">
+
+    </head>
+    <body>
+
+        {% if Mensaje != None %} 
+
+            <div class="Mensaje_envio">
+                <p> {{Mensaje}} </p>
+                <a href="/Contactame/"> 
+                
+                    <button> Continuar </button>
+
+                </a>
+            </div>
+
+        {% endif %}
+
+        <div id="caja_contacto">
+
+            <div class="imagen">
+
+                <a href="/Inicio/">
+
+                    <img src="{% static 'img/Yo/Logo.png' %}" alt="Logo">
+
+                </a>
+
+            </div>
+
+            <div>
+
+                <form class="formulario_contacto" action="/Correo_enviado/" method="POST"> {% csrf_token %}
+
+                    {% if user.is_authenticated %}
+
+                        <label for="Usuario">Usuario: </label>
+                        <input type="text" name="Usuario" id="Usuario" value="{{user.username}}" readonly>
+
+                    {% else %}
+
+                        <label for="Usuario">Usuario: </label>
+                        <input type="text" name="Usuario" id="Usuario" required>
+
+                    {% endif %}
+
+                    <label for="Asunto">Asunto: </label>
+                    <input type="text" name="Asunto" id="Asunto" required>
+                    <label for="Descripcion">Descripcion: </label>
+                    <textarea name="Descripcion" id="Descripcion" cols="15" rows="10" required></textarea>
+                    <label for="Enviar">Enviar</label>
+                    <input id="Enviar" type="submit" name="Enviar" value="Enviar">
+                    
+        
+                </form>
+
+            </div>
+
+        </div>
+        
+    </body>
+</html>
+
+
+{% endblock %}

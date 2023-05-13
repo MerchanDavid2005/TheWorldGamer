@@ -1,0 +1,494 @@
+body{
+
+    background: #000;
+
+}
+
+#Todo{
+
+    width: 95%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+
+}
+
+#pedido-todo{
+
+    display: flex;
+    width: max-content;
+    height: max-content;
+
+}
+
+#pedido-todo > div{
+
+    padding-top: 50px;
+    width: 450px;
+    height: 700px;
+    margin: 0 50px;
+
+}
+
+#Formulario-pedido > h1{
+
+    margin: 15px 0;
+    text-align: center;
+    color: #0ff;
+
+}
+
+#Formulario-pedido > p{
+
+    margin: 15px 0;
+    color: #fff;
+    font-size: 20px;
+
+}
+
+#Formulario-pedido span{
+
+    color: #0af;
+    font-size: 20px;
+
+}
+
+#Formulario-pedido input{
+
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+    margin: 20px;
+
+}
+
+.enviar{
+
+    background: #0fa;
+
+}
+
+.Texto_iniciar_sesion{
+
+    display: block;
+    margin: 10px 0;
+    font-size: 20px;
+    color: #0af;
+
+}
+
+.ir_a_registrarse{
+
+    width: 100%;
+    height: 50px;
+    background: #0fa;
+    margin: 20px 0;
+    font-size: 20px;
+
+}
+
+.imagen-pedido{
+
+    transition-property: transform;
+    transition-duration: 0.5s;
+
+}
+
+.imagen-pedido:hover{
+
+    transform: scale(1.1);
+
+}
+
+#Cuadro-Mensaje_pedido{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 35%;
+    left: 30%;
+    width: 670px;
+    height: 290px;
+    margin: auto;
+    font-size: 35px;
+    background: #000;
+    outline: 5px solid #0ff;
+
+}
+
+#Cuadro-Mensaje_pedido p{
+
+    color: #0ff;
+    margin: 30px 0;
+    text-align: center;
+
+}
+
+.Continuar{
+    
+    width: 300px;
+    height: 50px;
+    background: #0fa;
+    font-size: 20px;
+
+}
+
+/* --------------------------------------------------------- Footer ---------------------------------------------- */
+
+#Pedidos{
+
+    width: 100%;
+    height: max-content;
+    margin: 60px 0;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.titulo_mas_populares{
+
+    color: #0ff;
+    text-align: center;
+    margin: 40px;
+
+}
+
+.Mejores-juegos{
+
+    margin: 50px 0;
+    width: 300px;
+    height: 650px;
+    text-align: center;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    
+}
+
+.Mejores-juegos:hover{
+
+    transform: scale(1.1);
+
+}
+
+.Mejores-juegos h1{
+
+    margin: 15px 0;
+    font-size: 30px;
+    color: #0ff;
+
+}
+
+.Mejores-juegos p{
+
+    color: #fff;
+    margin: 20px 0;
+    font-size: 20px;
+    
+}
+
+.Mejores-juegos b{
+
+    color: #0af;
+    margin: 10px 0;
+    font-size: 20px;
+
+}
+
+.Mayor-pedido-img{
+
+    width: 100%;
+    height: 220px;
+    margin: 20px 0;
+
+}
+
+.Dar_voto{
+
+    width: 100px;
+    height: 40px;
+    background: #0fa;
+    border: 3px solid #0ff;
+    border-radius: 15px;
+
+}
+
+/* --------------------------------------------------- Responsive ------------------------------------------------------ */
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 900px){
+
+    #pedido-todo > div{
+
+        padding-top: 10px;
+        width: 250px;
+        height: 450px;
+        margin: 0 15px;
+    
+    }
+
+    #Formulario-pedido > h1{
+
+        margin: 10px 0;
+        font-size: 1.6em;
+    
+    }
+    
+    #Formulario-pedido > p{
+    
+        margin: 10px 0;
+        font-size: 0.8em;
+    
+    }
+    
+    #Formulario-pedido span{
+    
+        font-size: 0.8em;
+    
+    }
+    
+    #Formulario-pedido input{
+
+        height: 40px;
+        padding-left: 5px;
+        font-size: 0.7em;
+        margin: 10px;
+    
+    }
+
+    #Pedidos{
+
+        width: 100%;
+        height: max-content;
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-evenly;
+    
+    }
+    
+    .titulo_mas_populares{
+    
+        color: #0ff;
+        text-align: center;
+        font-size: 1.6em;
+    
+    }
+    
+    .Mejores-juegos{
+    
+        width: 150px;
+        height: 350px;
+        
+    }
+    
+    
+    .Mejores-juegos h1{
+    
+        font-size: 1.3em;
+        color: #0ff;
+    
+    }
+    
+    .Mejores-juegos p{
+    
+        color: #fff;
+        margin: 10px 0;
+        font-size: 0.8em;
+        
+    }
+    
+    .Mejores-juegos b{
+    
+        color: #0af;
+        margin: 10px 0;
+        font-size: 0.8em;
+    
+    }
+    
+    .Mayor-pedido-img{
+    
+        width: 100%;
+        height: 150px;
+        margin: 20px 0;
+    
+    }
+    
+    .Dar_voto{
+    
+        width: 100px;
+        height: 40px;
+        background: #0fa;
+        border: 3px solid #0ff;
+        border-radius: 15px;
+    
+    }
+
+}
+
+@media (min-width: 901px) and (max-width: 1050px){
+
+    #pedido-todo > div{
+
+        padding-top: 10px;
+        width: 300px;
+        height: 400px;
+        margin: 0 15px;
+    
+    }
+
+    #Formulario-pedido > h1{
+
+        margin: 10px 0;
+    
+    }
+    
+    #Formulario-pedido > p{
+    
+        margin: 10px 0;
+        font-size: 0.8em;
+    
+    }
+    
+    #Formulario-pedido span{
+    
+        font-size: 0.8em;
+    
+    }
+    
+    #Formulario-pedido input{
+    
+        width: 100%;
+        height: 40px;
+        padding-left: 5px;
+        font-size: 0.7em;
+        margin: 10px;
+    
+    }
+
+}
+
+@media (min-width: 1700px){
+
+    #Todo{
+
+        width: 95%;
+        height: max-content;
+
+    }
+
+    #pedido-todo > div{
+
+        padding-top: 50px;
+        width: 600px;
+        height: 900px;
+        margin: 0 50px;
+    
+    }
+    
+    #Formulario-pedido > h1{
+    
+        margin: 15px 0;
+        text-align: center;
+        color: #0ff;
+        font-size: 40px;
+    
+    }
+    
+    #Formulario-pedido > p{
+    
+        margin: 15px 0;
+        color: #fff;
+        font-size: 25px;
+    
+    }
+    
+    #Formulario-pedido span{
+    
+        color: #0af;
+        font-size: 25px;
+    
+    }
+    
+    #Formulario-pedido input{
+    
+        height: 65px;
+        font-size: 20px;
+    
+    }
+
+    .Texto_iniciar_sesion{
+
+        font-size: 25px;
+    
+    }
+    
+    .ir_a_registrarse{
+    
+        height: 65px;
+    
+    }
+
+    #Cuadro-Mensaje{
+
+        width: 550px;
+        height: 40px;
+        padding-top: 15px;
+        margin: auto;
+        font-size: 30px;
+        color: #0fa;
+    
+    }
+
+    .titulo_mas_populares{
+
+        font-size: 40px;
+    }
+
+    
+    .Mejores-juegos{
+
+        width: 400px;
+        height: 900px;
+        transition-property: transform;
+        transition-duration: 0.5s;
+        
+    }
+
+    .Mejores-juegos h1{
+
+        font-size: 35px; 
+    
+    }
+
+    .Mejores-juegos p{
+
+        font-size: 30px;
+        
+    }
+    
+    .Mejores-juegos b{
+    
+        font-size: 30px;
+    
+    }
+
+    .Dar_voto{
+
+        width: 150px;
+        height: 70px;
+        font-size: 20px;
+    
+    }
+
+}
+
+
+
+
+    
+
