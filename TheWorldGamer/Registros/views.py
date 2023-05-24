@@ -28,6 +28,8 @@ def agregar_valor(request, id):
         limite_3_meses = i.actualizacion.date() + timedelta(days=90)
         limite_6_meses = i.actualizacion.date() + timedelta(days=180)
         limite_1_año = i.actualizacion.date() + timedelta(days=365)
+        
+        hoy = timezone.now()
 
         if i.Id_usuario == usuario_id:
 
@@ -35,7 +37,7 @@ def agregar_valor(request, id):
 
                 if i.Tiempo == "7 dias":
 
-                    if i.actualizacion.date() > limite_7_dias:
+                    if hoy.date() > limite_7_dias:
 
                         i.Precio = precio
                         i.alquiladas += 1
@@ -51,7 +53,7 @@ def agregar_valor(request, id):
                     
                 if i.Tiempo == "15 dias":
 
-                    if i.actualizacion.date() > limite_15_dias:
+                    if hoy.date() > limite_15_dias:
 
                         i.Precio = precio
                         i.alquiladas += 1
@@ -67,7 +69,7 @@ def agregar_valor(request, id):
                     
                 if i.Tiempo == "1 mes":
 
-                    if i.actualizacion.date() > limite_1_mes:
+                    if hoy.date() > limite_1_mes:
 
                         i.Precio = precio
                         i.alquiladas += 1
@@ -83,7 +85,7 @@ def agregar_valor(request, id):
                     
                 if i.Tiempo == "3 meses":
 
-                    if i.actualizacion.date() > limite_3_meses:
+                    if hoy.date() > limite_3_meses:
 
                         i.Precio = precio
                         i.alquiladas += 1
@@ -99,7 +101,7 @@ def agregar_valor(request, id):
                     
                 if i.Tiempo == "6 meses":
 
-                    if i.actualizacion.date() > limite_6_meses:
+                    if hoy.date() > limite_6_meses:
 
                         i.Precio = precio
                         i.alquiladas += 1
@@ -115,7 +117,7 @@ def agregar_valor(request, id):
                     
                 if i.Tiempo == "1 año":
 
-                    if i.actualizacion.date() > limite_1_año:
+                    if hoy.date() > limite_1_año:
 
                         i.Precio = precio
                         i.alquiladas += 1
